@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rul — Logo & Brand Identity Designer Makassar | rulcreative.std</title>
+<meta name="description" content="Rul (rulcreative.std) — Logo & brand identity designer berbasis di Makassar. 7+ tahun pengalaman membangun identitas visual untuk brand tech, F&B, hingga luxury.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #12151B;
+    --ink-soft: #1C212B;
+    --paper: #F4F0E6;
+    --paper-dim: #E7E1D2;
+    --signal: #FF4630;
+    --gray: #8B8579;
+    --gray-on-paper: #6B6558;
+    --font-display: 'Fraunces', serif;
+    --font-body: 'Inter', sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--ink);
+    color: var(--paper);
+    font-family: var(--font-body);
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  a { color: inherit; }
+
+  :focus-visible {
+    outline: 2px solid var(--signal);
+    outline-offset: 3px;
+  }
+
+  .wrap {
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 0 32px;
+  }
+
+  /* ---------- Header ---------- */
+  header.site {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 28px 32px;
+    border-bottom: 1px solid rgba(244,240,230,0.12);
+    font-family: var(--font-mono);
+    font-size: 13px;
+    letter-spacing: 0.02em;
+  }
+
+  header.site .mark {
+    font-weight: 500;
+    color: var(--paper);
+  }
+
+  header.site .loc {
+    color: var(--gray);
+  }
+
+  header.site nav a {
+    text-decoration: none;
+    color: var(--gray);
+    margin-left: 24px;
+    transition: color 0.15s ease;
+  }
+  header.site nav a:hover { color: var(--paper); }
+
+  /* ---------- Hero ---------- */
+  .hero {
+    padding: 120px 32px 100px;
+    position: relative;
+  }
+
+  .hero .eyebrow {
+    font-family: var(--font-mono);
+    font-size: 13px;
+    color: var(--signal);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    margin-bottom: 24px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .hero .eyebrow .crop { font-size: 16px; }
+
+  .hero h1 {
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: clamp(48px, 8vw, 104px);
+    line-height: 0.98;
+    letter-spacing: -0.01em;
+    max-width: 880px;
+  }
+
+  .hero .sub {
+    margin-top: 32px;
+    max-width: 560px;
+    font-size: 18px;
+    color: rgba(244,240,230,0.78);
+  }
+
+  .hero .actions {
+    margin-top: 44px;
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+  }
+
+  .btn {
+    font-family: var(--font-mono);
+    font-size: 13px;
+    letter-spacing: 0.02em;
+    text-decoration: none;
+    padding: 14px 22px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    border-radius: 2px;
+    transition: transform 0.15s ease, background 0.15s ease;
+  }
+  .btn:hover { transform: translateY(-2px); }
+
+  .btn.primary {
+    background: var(--signal);
+    color: var(--ink);
+  }
+  .btn.ghost {
+    border: 1px solid rgba(244,240,230,0.3);
+    color: var(--paper);
+  }
+  .btn.ghost:hover { border-color: var(--paper); }
+
+  /* ---------- Specimen strip ---------- */
+  .specimen {
+    background: var(--paper);
+    color: var(--ink);
+    padding: 56px 32px;
+  }
+
+  .specimen .wrap {
+    display: grid;
+    grid-template-columns: 1.2fr 2fr;
+    gap: 48px;
+    align-items: end;
+  }
+
+  .specimen .aa {
+    font-family: var(--font-display);
+    font-size: 140px;
+    font-weight: 600;
+    line-height: 0.8;
+  }
+  .specimen .aa-label {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    color: var(--gray-on-paper);
+    margin-top: 12px;
+    letter-spacing: 0.04em;
+  }
+
+  .swatches {
+    display: flex;
+    gap: 16px;
+  }
+
+  .swatch {
+    flex: 1;
+    min-width: 0;
+  }
+  .swatch .chip {
+    height: 84px;
+    border-radius: 2px;
+    margin-bottom: 10px;
+  }
+  .swatch .name {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    letter-spacing: 0.02em;
+  }
+  .swatch .industry {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    color: var(--gray-on-paper);
+  }
+
+  .chip.scaleup { background: linear-gradient(135deg, #2455F2, #79C7FF); }
+  .chip.orin { background: linear-gradient(135deg, #1A1A1A, #C9A24B); }
+  .chip.afuu { background: linear-gradient(135deg, #C2391F, #F2D49B); }
+
+  /* ---------- Section heading ---------- */
+  .section-head {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin-bottom: 48px;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .section-head h2 {
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: clamp(32px, 4vw, 44px);
+  }
+
+  .section-head .tag {
+    font-family: var(--font-mono);
+    font-size: 13px;
+    color: var(--gray);
+  }
+
+  /* ---------- Case files ---------- */
+  .cases {
+    padding: 120px 32px;
+  }
+
+  .case-grid {
+    display: grid;
+    gap: 28px;
+  }
+
+  .case {
+    position: relative;
+    background: var(--ink-soft);
+    border: 1px solid rgba(244,240,230,0.1);
+    padding: 40px;
+    display: grid;
+    grid-template-columns: 1fr 1.4fr;
+    gap: 40px;
+    align-items: center;
+  }
+
+  .case::before, .case::after,
+  .case .crop-br, .case .crop-bl {
+    content: '+';
+    position: absolute;
+    color: var(--signal);
+    font-size: 18px;
+    font-family: var(--font-mono);
+    line-height: 1;
+  }
+  .case::before { top: 14px; left: 14px; }
+  .case::after { top: 14px; right: 14px; }
+  .case .crop-br { bottom: 14px; right: 14px; }
+  .case .crop-bl { bottom: 14px; left: 14px; }
+
+  .case .swatch-block {
+    aspect-ratio: 4/3;
+    border-radius: 2px;
+  }
+
+  .case .meta {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    color: var(--gray);
+    display: flex;
+    gap: 18px;
+    margin-bottom: 16px;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    flex-wrap: wrap;
+  }
+
+  .case h3 {
+    font-family: var(--font-display);
+    font-size: 30px;
+    font-weight: 600;
+    margin-bottom: 12px;
+  }
+
+  .case p {
+    color: rgba(244,240,230,0.75);
+    font-size: 15px;
+    max-width: 460px;
+  }
+
+  .case .scope {
+    margin-top: 18px;
+    font-family: var(--font-mono);
+    font-size: 12px;
+    color: var(--gray);
+  }
+
+  /* ---------- Process ---------- */
+  .process {
+    background: var(--paper);
+    color: var(--ink);
+    padding: 120px 32px;
+  }
+
+  .process .section-head .tag,
+  .process .section-head h2 { color: var(--ink); }
+  .process .section-head .tag { color: var(--gray-on-paper); }
+
+  .steps {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 0;
+    border-top: 1px solid var(--paper-dim);
+  }
+
+  .step {
+    padding: 28px 20px 0;
+    border-right: 1px solid var(--paper-dim);
+  }
+  .step:last-child { border-right: none; }
+
+  .step .num {
+    font-family: var(--font-mono);
+    font-size: 13px;
+    color: var(--signal);
+    display: block;
+    margin-bottom: 14px;
+  }
+
+  .step h4 {
+    font-family: var(--font-display);
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 8px;
+  }
+
+  .step p {
+    font-size: 13px;
+    color: var(--gray-on-paper);
+  }
+
+  /* ---------- Contact / colophon ---------- */
+  .colophon {
+    padding: 120px 32px 60px;
+  }
+
+  .colophon h2 {
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: clamp(36px, 6vw, 64px);
+    max-width: 720px;
+    margin-bottom: 36px;
+  }
+
+  .colophon .links {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    margin-bottom: 80px;
+  }
+
+  footer.bottom {
+    border-top: 1px solid rgba(244,240,230,0.12);
+    padding: 24px 32px;
+    display: flex;
+    justify-content: space-between;
+    font-family: var(--font-mono);
+    font-size: 12px;
+    color: var(--gray);
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  /* ---------- Responsive ---------- */
+  @media (max-width: 760px) {
+    .specimen .wrap { grid-template-columns: 1fr; gap: 32px; }
+    .specimen .aa { font-size: 96px; }
+    .case { grid-template-columns: 1fr; }
+    .steps { grid-template-columns: 1fr; }
+    .step { border-right: none; border-bottom: 1px solid var(--paper-dim); padding-bottom: 24px; }
+    header.site nav a { margin-left: 14px; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    .btn:hover { transform: none; }
+  }
+</style>
+</head>
+<body>
+
+<header class="site">
+  <span class="mark">rulcreative.std</span>
+  <nav>
+    <a href="#karya">Karya</a>
+    <a href="#proses">Proses</a>
+    <a href="#kontak">Kontak</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <div class="eyebrow"><span class="crop">+</span> Berbasis di Makassar, Indonesia</div>
+    <h1>Logo &amp; brand identity, dibangun dari cerita yang nyata.</h1>
+    <p class="sub">Rul — desainer brand identity dengan 7+ tahun pengalaman, membantu bisnis dari startup teknologi hingga F&amp;B menemukan wajah visual yang konsisten dan bisa diingat.</p>
+    <div class="actions">
+      <a class="btn primary" href="#karya">Lihat karya →</a>
+      <a class="btn ghost" href="#kontak">Diskusi project</a>
+    </div>
+  </div>
+</section>
+
+<section class="specimen">
+  <div class="wrap">
+    <div>
+      <div class="aa">Aa</div>
+      <div class="aa-label">DISPLAY / FRAUNCES — TIAP BRAND DAPAT SISTEM TIPOGRAFINYA SENDIRI</div>
+    </div>
+    <div class="swatches">
+      <div class="swatch">
+        <div class="chip scaleup"></div>
+        <div class="name">ScaleUp</div>
+        <div class="industry">Tech startup</div>
+      </div>
+      <div class="swatch">
+        <div class="chip orin"></div>
+        <div class="name">ORIN</div>
+        <div class="industry">Luxury fragrance</div>
+      </div>
+      <div class="swatch">
+        <div class="chip afuu"></div>
+        <div class="name">AFUU Premio</div>
+        <div class="industry">F&amp;B</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cases" id="karya">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Karya terpilih</h2>
+      <span class="tag">03 case files</span>
+    </div>
+
+    <div class="case-grid">
+
+      <article class="case">
+        <span class="crop-br">+</span><span class="crop-bl">+</span>
+        <div class="swatch-block chip scaleup"></div>
+        <div>
+          <div class="meta"><span>Client — ScaleUp</span><span>Industri — Tech Startup</span></div>
+          <h3>Identitas yang tumbuh bersama produk</h3>
+          <p>Sistem brand untuk startup teknologi yang butuh fleksibilitas — logo, pattern language, dan panduan aplikasi lintas platform digital.</p>
+          <div class="scope">SCOPE — Brand strategy / Logo system / Pattern language</div>
+        </div>
+      </article>
+
+      <article class="case">
+        <span class="crop-br">+</span><span class="crop-bl">+</span>
+        <div class="swatch-block chip orin"></div>
+        <div>
+          <div class="meta"><span>Client — ORIN</span><span>Industri — Luxury Fragrance</span></div>
+          <h3>Kemewahan yang berbicara pelan</h3>
+          <p>Brand identity lengkap untuk parfum niche, dirancang dengan storytelling personal — diperluas hingga ke UI aplikasi pendukung.</p>
+          <div class="scope">SCOPE — Brand storytelling / Packaging direction / UI extension</div>
+        </div>
+      </article>
+
+      <article class="case">
+        <span class="crop-br">+</span><span class="crop-bl">+</span>
+        <div class="swatch-block chip afuu"></div>
+        <div>
+          <div class="meta"><span>Client — AFUU Premio</span><span>Industri — F&amp;B</span></div>
+          <h3>Monogram yang langsung dikenali</h3>
+          <p>Identitas visual untuk brand martabak premium — monogram yang kuat, sistem kemasan, dan visual point-of-sale yang konsisten.</p>
+          <div class="scope">SCOPE — Monogram construction / Packaging / POS visual system</div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<section class="process" id="proses">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Proses kerja</h2>
+      <span class="tag">5 tahap</span>
+    </div>
+    <div class="steps">
+      <div class="step">
+        <span class="num">01</span>
+        <h4>Discovery</h4>
+        <p>Wawancara mendalam buat pahami bisnis, audiens, dan tujuan brand.</p>
+      </div>
+      <div class="step">
+        <span class="num">02</span>
+        <h4>Mood &amp; referensi</h4>
+        <p>Kumpulkan arah visual dan rasa yang sesuai dengan brief.</p>
+      </div>
+      <div class="step">
+        <span class="num">03</span>
+        <h4>Sketsa manual</h4>
+        <p>Eksplorasi bentuk di atas kertas sebelum masuk ke digital.</p>
+      </div>
+      <div class="step">
+        <span class="num">04</span>
+        <h4>Digitisasi vektor</h4>
+        <p>Finalisasi bentuk di Illustrator &amp; Photoshop.</p>
+      </div>
+      <div class="step">
+        <span class="num">05</span>
+        <h4>Mockup &amp; delivery</h4>
+        <p>Penerapan ke aplikasi nyata dan penyerahan aset brand.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="colophon" id="kontak">
+  <div class="wrap">
+    <h2>Punya brand yang butuh wajah baru? Mari bicarakan.</h2>
+    <div class="links">
+      <a class="btn primary" href="https://instagram.com/rulcreative.std" target="_blank" rel="noopener">Instagram →</a>
+      <a class="btn ghost" href="mailto:hello@rulcreative.std">Email saya</a>
+    </div>
+  </div>
+</section>
+
+<footer class="bottom">
+  <span>rulcreative.std — Makassar, Sulawesi Selatan</span>
+  <span>© 2026</span>
+</footer>
+
+</body>
+</html>
